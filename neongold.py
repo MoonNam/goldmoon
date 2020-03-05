@@ -17,7 +17,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.content.startswith("!버닝로또"):
+    if message.content.startswith("!로또"):
         Text = ""
         learn = message.content.split(" ")
         vrsize = len(learn)
@@ -71,7 +71,7 @@ async def on_message(message):
             embed.set_thumbnail(url="https://o.remove.bg/uploads/cc1eb37d-e8d3-4550-aab3-ebedc0e06758/2.jpg")
             await message.channel.send(embed=embed)
 
-    if message.content.startswith('!버닝홀짝'):
+    if message.content.startswith('!골드홀짝'):
 
         Text = ""
         learn = message.content.split(" ")
@@ -94,7 +94,7 @@ async def on_message(message):
             print("땡")
             await message.channel.send(embed=discord.Embed(description="홀 짝 결과는 " + foodresult + " 입니다"))
 
-    if message.content.startswith("!버닝사다리"):
+    if message.content.startswith("!사다리"):
         team = message.content[7:]
         peopleteam = team.split("/")
         people = peopleteam[0]
