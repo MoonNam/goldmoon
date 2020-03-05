@@ -1,1 +1,1 @@
-worker: python goldmoon.py
+worker: python neongold.py
