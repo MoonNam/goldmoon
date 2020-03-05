@@ -94,7 +94,7 @@ async def on_message(message):
             print("땡")
             await message.channel.send(embed=discord.Embed(description="홀 짝 결과는 " + foodresult + " 입니다"))
 
-    if message.content.startswith("!사다리"):
+    if message.content.startswith("!골드사다리"):
         team = message.content[7:]
         peopleteam = team.split("/")
         people = peopleteam[0]
