@@ -29,7 +29,7 @@ async def on_message(message):
 
         for i in range(sec, 0, -1):
             print(i)
-            await message.channel.send(embed=discord.Embed(description=str(i)+'초'))
+            await message.channel.send(embed=discord.Embed(description=str(i) + '초'))
             time.sleep(1)
         else:
             Text = ""
@@ -71,7 +71,6 @@ async def on_message(message):
             embed.set_thumbnail(url="https://o.remove.bg/uploads/cc1eb37d-e8d3-4550-aab3-ebedc0e06758/2.jpg")
             await message.channel.send(embed=embed)
 
-
     if message.content.startswith('!버닝홀짝'):
 
         Text = ""
@@ -85,7 +84,7 @@ async def on_message(message):
 
         for i in range(sec, 0, -1):
             print(i)
-            await message.channel.send(embed=discord.Embed(description=str(i)+'초'))
+            await message.channel.send(embed=discord.Embed(description=str(i) + '초'))
             time.sleep(1)
         else:
             food = "홀 짝"
@@ -93,9 +92,9 @@ async def on_message(message):
             foodnumber = random.randint(1, len(foodchoice))
             foodresult = foodchoice[foodnumber - 1]
             print("땡")
-            await message.channel.send(embed=discord.Embed(description="홀 짝 결과는 "+foodresult+" 입니다"))
-            
-     if message.content.startswith("!버닝사다리"):
+            await message.channel.send(embed=discord.Embed(description="홀 짝 결과는 " + foodresult + " 입니다"))
+
+    if message.content.startswith("!버닝사다리"):
         team = message.content[7:]
         peopleteam = team.split("/")
         people = peopleteam[0]
@@ -105,6 +104,5 @@ async def on_message(message):
         random.shuffle(teamname)
         for i in range(0, len(person)):
             await message.channel.send(embed=discord.Embed(description=person[i] + " ►►►►► " + teamname[i]))
-
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
