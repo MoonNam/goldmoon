@@ -94,6 +94,17 @@ async def on_message(message):
             foodresult = foodchoice[foodnumber - 1]
             print("땡")
             await message.channel.send(embed=discord.Embed(description="홀 짝 결과는 "+foodresult+" 입니다"))
+            
+     if message.content.startswith("!버닝사다리"):
+        team = message.content[7:]
+        peopleteam = team.split("/")
+        people = peopleteam[0]
+        team = peopleteam[1]
+        person = people.split(" ")
+        teamname = team.split(" ")
+        random.shuffle(teamname)
+        for i in range(0, len(person)):
+            await message.channel.send(embed=discord.Embed(description=person[i] + " ►►►►► " + teamname[i]))
 
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
