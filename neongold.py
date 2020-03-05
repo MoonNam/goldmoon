@@ -17,7 +17,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.content.startswith("!로또"):
+    if message.content.startswith("!골드로또"):
         Text = ""
         learn = message.content.split(" ")
         vrsize = len(learn)
