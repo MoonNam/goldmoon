@@ -33,9 +33,9 @@ async def on_message(message):
             time.sleep(1)
         else:
             Text = ""
-            number = [1, 2, 3, 4, 5, 6, 7]
+            number = [1, 2, 3, 4, 5, 6, 7, 8]
             count = 0
-            for i in range(0, 7):
+            for i in range(0, 8):
                 num = random.randrange(1, 46)
                 number[i] = num
                 if count >= 1:
