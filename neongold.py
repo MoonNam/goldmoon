@@ -68,7 +68,7 @@ async def on_message(message):
                 description=Text.strip(),
                 colour=discord.Color.blurple()
             )
-            embed.set_thumbnail(url="https://o.remove.bg/uploads/cc1eb37d-e8d3-4550-aab3-ebedc0e06758/2.jpg")
+            embed.set_thumbnail(url="https://o.remove.bg/uploads/c9285490-71cc-491c-b1f1-fbf559da7009/2.png")
             await message.channel.send(embed=embed)
 
     if message.content.startswith('!골드홀짝'):
