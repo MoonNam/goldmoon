@@ -16,61 +16,7 @@ async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=game)
 
 @client.event
-async def on_message(message):
-    if message.content.startswith("!골드로또"):
-        Text = ""
-        learn = message.content.split(" ")
-        vrsize = len(learn)
-        vrsize = int(vrsize)
-        for i in range(1, vrsize):
-            Text = Text + " " + learn[i]
-
-        sec = int(Text)
-
-        for i in range(sec, 0, -1):
-            print(i)
-            await message.channel.send(embed=discord.Embed(description=str(i) + '초'))
-            time.sleep(1)
-        else:
-            Text = ""
-            number = [1, 2, 3, 4, 5, 6]
-            count = 0
-            for i in range(0, 6):
-                num = random.randrange(1, 30)
-                number[i] = num
-                if count >= 1:
-                    for i2 in range(0, i):
-                        if number[i] == number[i2]:
-                            numberText = number[i]
-                            print("작동 이전값 : " + str(numberText))
-                            number[i] = random.randrange(1, 46)
-                            numberText = number[i]
-                            print("작동 현재값 : " + str(numberText))
-                            if number[i] == number[i2]:
-                                numberText = number[i]
-                                print("작동 이전값 : " + str(numberText))
-                                number[i] = random.randrange(1, 46)
-                                numberText = number[i]
-                                print("작동 현재값 : " + str(numberText))
-                                if number[i] == number[i2]:
-                                    numberText = number[i]
-                                    print("작동 이전값 : " + str(numberText))
-                                    number[i] = random.randrange(1, 46)
-                                    numberText = number[i]
-                                    print("작동 현재값 : " + str(numberText))
-
-                count = count + 1
-                Text = Text + "  " + str(number[i])
-
-            print(Text.strip())
-            embed = discord.Embed(
-                title="로또 번호는 !",
-                description=Text.strip(),
-                colour=discord.Color.blurple()
-            )
-            embed.set_thumbnail(url="https://o.remove.bg/uploads/c9285490-71cc-491c-b1f1-fbf559da7009/2.png")
-            await message.channel.send(embed=embed)
-
+async def on_message(message): 
     if message.content.startswith('!골드홀짝'):
 
         Text = ""
