@@ -38,7 +38,7 @@ async def on_message(message):
             foodnumber = random.randint(1, len(foodchoice))
             foodresult = foodchoice[foodnumber - 1]
             print("땡")
-            await message.channel.send(embed=discord.Embed(description="홀 짝 결과는 " + [foodresult] + " 입니다"))
+            await message.channel.send(embed=discord.Embed(description="홀 짝 결과는 " + "[" + foodresult + "]" + " 입니다"))
 
     if message.content.startswith("!골드사다리"):
         team = message.content[7:]
