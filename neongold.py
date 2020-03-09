@@ -33,7 +33,7 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(description=str(i) + '초'))
             time.sleep(1)
         else:
-            food = "홀 짝"
+            food = "짝 홀 홀 짝 짝 짝 홀 짝 홀 짝 홀 홀 짝"
             foodchoice = food.split(" ")
             foodnumber = random.randint(1, len(foodchoice))
             foodresult = foodchoice[foodnumber - 1]
