@@ -19,7 +19,7 @@ async def on_ready():
 async def on_message(message): 
     if message.content.startswith('!골드홀짝'):
 
-        Text = "짝 "
+        Text = "짝 홀"
         learn = message.content.split(" ")
         vrsize = len(learn)
         vrsize = int(vrsize)
