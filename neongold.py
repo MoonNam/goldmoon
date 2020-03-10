@@ -19,7 +19,7 @@ async def on_ready():
 async def on_message(message): 
     if message.content.startswith('!골드홀짝'):
 
-        Text = "홀 짝"
+        Text = ""
         learn = message.content.split(" ")
         vrsize = len(learn)
         vrsize = int(vrsize)
@@ -30,10 +30,10 @@ async def on_message(message):
 
         for i in range(sec, 0, -1):
             print(i)
-            await message.channel.send(embed=discord.Embed(description=str(i) + '초'))
+            await message.channel.send(embed=discord.Embed(description=str(i)+'초'))
             time.sleep(1)
         else:
-            food = "짝 "
+            food = "홀 짝"
             foodchoice = food.split(" ")
             foodnumber = random.randint(1, len(foodchoice))
             foodresult = foodchoice[foodnumber - 1]
